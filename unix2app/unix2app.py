@@ -78,7 +78,7 @@ def write_plist(path, conf_dict):
         executable=conf_dict['executable'],
         icon=conf_dict['icon'],
         identifier=conf_dict['identifier'],
-        name=conf_dict['name'],
+        name=conf_dict['name'][:-4],
         version=conf_dict['version'],
         signature=conf_dict['signature'],
         build_version=conf_dict['build'],
