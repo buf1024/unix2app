@@ -1,6 +1,7 @@
 from setuptools import find_packages, setup
-import os
-import shutil
+
+with open("README.MD", "r") as f:
+    long_description = f.read()
 
 setup(
     name='unix2app',
@@ -8,12 +9,11 @@ setup(
     packages=find_packages(include=['unix2app']),
     include_package_data=True,
     zip_safe=False,
+    description='Mac console ui to gui app',
+    long_description=long_description,
+    long_description_content_type='text/markdown',
+    url="https://github.com/buf1024/unix2app",
     platform="any",
-    # packages=['package1', 'package2', 'package3'],
-    # package_dir={
-    #     'package2': 'package1',
-    #     'package3': 'package1',
-    # },
     install_requires=[
         'Click==7.1.2',
         'PyYAML==5.3.1'
